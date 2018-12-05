@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>异常详情页</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<p th:text="程序报错地址:  ${url}"/>
+	<p th:text="程序报错信息: ${exception.message}"/>
+</body>
+</html>

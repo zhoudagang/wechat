@@ -1,0 +1,26 @@
+             #禁止格式化操作，一旦格式化，多有注释都会消失       
+server:
+  port: 80   #端口号     
+  
+
+spring:                                                 #该配置使用Spring容器负责处理   
+  messages:                                             #表示进行资源配置
+    basename: i18n/Messages,i18n/Pages                  # 资源名称
+  datasource: 
+    type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
+    driver-class-name: com.mysql.jdbc.Driver        # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/zhou?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8            # 数据库连接地址
+    username: root                                  # 数据库用户名
+    password: ok                                    # 数据库连接密码
+    filters: stat,wall,log4j
+    dbcp2:                                          # 进行数据库连接池的配置
+      min-idle: 5                                   # 数据库连接池的最小维持连接数    
+      initial-size: 5                               # 初始化提供的连接数
+      max-total: 5                                  # 最大的连接数
+      max-wait-millis: 200                          # 等待连接获取的最大超时时间
+      
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatis配置文件所在路径
+  type-aliases-package: what.fuck.entity.vo             # 定义所有操作类的别名所在包
+  mapper-locations: classpath:mybatis/mapper/**/*.xml   # 所有的mapper映射文件

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>SpringBoot模版渲染</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<p th:text="'官方网站：' + ${url}" />
+	<p th:text="'用户名：' + ${name}" />
+
+	<!-- <iframe border="0" src="http://e.vhall.com/239792024" width="800" height="600"></iframe> -->
+	<div id="showTime"></div>
+</body>
+
+<script type="text/javascript">
+	
+	$(function () {
+		
+		$('#showTime').load('http://e.vhall.com/239792024');
+		
+	});
+
+</script>
+</html>
